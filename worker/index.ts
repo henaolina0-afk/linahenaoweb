@@ -36,7 +36,10 @@ async function suscribir(req: Request, env: Env): Promise<Response> {
 
   const base = `https://api.emailoctopus.com/lists/${env.EMAILOCTOPUS_LIST_ID}/contacts`;
   const headers = { Authorization: `Bearer ${env.EMAILOCTOPUS_API_KEY}`, "Content-Type": "application/json" };
-  const nombre = typeof datos.nombre === "string" ? datos.nombre.trim().slice(0, 80) : "";
+  // Solo letras, espacios, apóstrofo y guion: evita que se cuelen enlaces o texto en los correos personalizados.
+  // Si no cumple, se descarta el nombre pero no la suscripción.
+  const nombreCrudo = typeof datos.nombre === "string" ? datos.nombre.trim().replace(/\s+/g, " ") : "";
+  const nombre = /^[\p{L}][\p{L}' -]{0,39}$/u.test(nombreCrudo) ? nombreCrudo : "";
 
   // Alta nueva con doble confirmación (status "pending": EmailOctopus envía el correo de confirmación).
   const alta = await fetch(base, {
