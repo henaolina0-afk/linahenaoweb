@@ -27,6 +27,7 @@ export default function Pie() {
           <h2>Comprar</h2>
           <ul>
             <li><a href={SITIO.amazonAutora} rel="noopener" target="_blank">Amazon</a></li>
+            <li><a href="https://libros.market/libro/sobrevivir-no-es-vivir" rel="noopener" target="_blank">Libros.Market</a></li>
             <li><a href={SITIO.whatsappFirmados} rel="noopener" target="_blank">Ejemplar firmado (WhatsApp, Colombia)</a></li>
           </ul>
         </div>

@@ -21,7 +21,6 @@ export type Libro = {
 };
 
 const FIRMADO = "https://wa.me/573178312157";
-const AMAZON_AUTORA = "https://amazon.com/author/librosparacompartirlinahenao";
 
 export const LIBROS: Libro[] = [
   {
@@ -47,10 +46,10 @@ export const LIBROS: Libro[] = [
       },
     ],
     compra: [
-      { tienda: "amazon", texto: "Amazon", url: AMAZON_AUTORA },
+      { tienda: "librosmarket", texto: "Comprar en Libros.Market", url: "https://libros.market/libro/sobrevivir-no-es-vivir" },
       { tienda: "firmado", texto: "Ejemplar firmado (Colombia)", url: FIRMADO },
     ],
-    pendiente: "Enlaces de compra directos de Amazon y Libros.Market (disponibles hacia el 1 de diciembre)",
+    pendiente: "Enlace de Amazon (el libro se está subiendo)",
   },
   {
     slug: "esencia-voz-y-expresion",

@@ -34,7 +34,7 @@ export default function BloqueGuia({ titulo = "h2" }: { titulo?: "h1" | "h2" }) 
             ))}
           </ol>
           <p className="firma">
-            <Image src="/img/autora-cara.webp" alt="" width={300} height={300} />
+            <Image src="/img/lina-avatar.webp" alt="" width={320} height={320} />
             <span>
               Escrita por Lina Henao, autora de <em>Sobrevivir no es vivir</em>. Pasó cinco años en Al-Anon. Se lee en media
               hora.
