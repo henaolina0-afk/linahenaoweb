@@ -40,9 +40,8 @@ export default function Cabecera() {
               </li>
             ))}
           </ul>
-          {/* Fase 1: el botón lleva a Cartas de Lina; en fase 2 pasa a «La guía gratuita» */}
-          <Link href="/#cartas" className="btn btn-dark">
-            Cartas de Lina
+          <Link href="/guia/" className="btn btn-dark" aria-current={ruta?.startsWith("/guia") ? "page" : undefined}>
+            La guía gratuita
           </Link>
         </nav>
       </div>

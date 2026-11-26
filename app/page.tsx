@@ -55,7 +55,8 @@ export default function Inicio() {
             {/* Frase A (docs/01-contenido.md); pendiente de que Lina confirme A, B o C */}
             <p className="hook">Si alguna vez amaste tanto a alguien que ya no sabías qué hacer, este libro es para ti.</p>
             <div className="ctas">
-              <Link href={`/libros/${sobrevivir.slug}/`} className="btn btn-ladrillo">Conoce el libro</Link>
+              <Link href="/guia/" className="btn btn-ladrillo">Recibe la guía gratuita</Link>
+              <Link href={`/libros/${sobrevivir.slug}/`} className="btn btn-crema">Conoce el libro</Link>
             </div>
           </div>
         </div>

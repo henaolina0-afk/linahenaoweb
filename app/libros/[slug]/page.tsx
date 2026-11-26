@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import BloqueGuia from "@/components/BloqueGuia";
 import FormCartas from "@/components/FormCartas";
 import Texto from "@/components/Texto";
 import { LIBROS, getLibro } from "@/lib/libros";
@@ -56,7 +57,12 @@ export default async function FichaLibro({ params }: PageProps<"/libros/[slug]">
                 </a>
               ))}
             </div>
-            {l.pendiente && <p className="pendiente" style={{ marginTop: 14 }}>[PENDIENTE: {l.pendiente}]</p>}
+            {oscuro && (
+              <p style={{ marginTop: 18 }}>
+                <a href="#guia" className="enlace-guia">Recibe gratis la guía «La noche que vuelve a pasar» →</a>
+              </p>
+            )}
+            {l.pendiente &&<p className="pendiente" style={{ marginTop: 14 }}>[PENDIENTE: {l.pendiente}]</p>}
           </div>
         </div>
       </section>
@@ -98,16 +104,21 @@ export default async function FichaLibro({ params }: PageProps<"/libros/[slug]">
         </section>
       )}
 
-      <section className="cartas cartas-ficha">
-        <div className="wrap">
-          <div>
-            <p className="label">Cartas de Lina</p>
-            <h2>Novedades, poemas y fechas, en tu correo</h2>
-            <p className="promesa">Una carta de vez en cuando. Nada más.</p>
+      {/* Sobrevivir lleva la guía; los demás libros, Cartas de Lina */}
+      {oscuro ? (
+        <BloqueGuia />
+      ) : (
+        <section className="cartas cartas-ficha">
+          <div className="wrap">
+            <div>
+              <p className="label">Cartas de Lina</p>
+              <h2>Novedades, poemas y fechas, en tu correo</h2>
+              <p className="promesa">Una carta de vez en cuando. Nada más.</p>
+            </div>
+            <FormCartas />
           </div>
-          <FormCartas />
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="otros">
         <div className="wrap">

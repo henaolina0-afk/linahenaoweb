@@ -5,6 +5,6 @@ import { SITIO } from "@/lib/sitio";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const rutas = ["/", "/libros/", "/sobre-lina/", "/agenda/", "/politica-de-datos/", ...LIBROS.map((l) => `/libros/${l.slug}/`)];
+  const rutas = ["/", "/libros/", "/sobre-lina/", "/agenda/", "/guia/","/politica-de-datos/", ...LIBROS.map((l) => `/libros/${l.slug}/`)];
   return rutas.map((r) => ({ url: `${SITIO.url}${r}` }));
 }
