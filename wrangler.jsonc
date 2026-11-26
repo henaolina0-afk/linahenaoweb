@@ -8,6 +8,11 @@
   // wrangler deploy construye el sitio antes de publicar (genera ./out)
   "build": { "command": "npm run build" },
   "workers_dev": true,
+  // Dominio propio (zona linahenao.net en la cuenta de Lina). www redirige a la raíz con una Redirect Rule de Cloudflare
+  "routes": [
+    { "pattern": "linahenao.net", "custom_domain": true },
+    { "pattern": "www.linahenao.net", "custom_domain": true }
+  ],
   "preview_urls": true,
   "assets": {
     "directory": "./out",
