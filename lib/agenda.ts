@@ -25,6 +25,7 @@ const CONSULTA = `*[_type == "evento" && defined(fecha) && defined(titulo)] | or
 export async function getEventos(): Promise<Evento[]> {
   // API directa (no apicdn): el build corre segundos después de publicar y el CDN aún tendría la versión anterior
   const url = `https://${PROYECTO}.api.sanity.io/${API}/data/query/${DATASET}?query=${encodeURIComponent(CONSULTA)}`;
+  // Next guarda esta respuesta en .next/cache/fetch-cache; el script «prebuild» la borra para que cada build traiga datos frescos
   const r = await fetch(url);
   if (!r.ok) throw new Error(`Sanity respondió ${r.status} al leer la agenda`);
   const { result } = (await r.json()) as { result: Evento[] };
