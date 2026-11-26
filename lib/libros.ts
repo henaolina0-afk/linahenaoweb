@@ -101,7 +101,7 @@ export const LIBROS: Libro[] = [
     anio: 2023,
     color: "#4E7F7B",
     tinte: "#E6EFEE",
-    portada: { src: "/img/cov-metaforas-de-vida.webp", w: 315, h: 488 },
+    portada: { src: "/img/cov-metaforas-de-vida.webp", w: 720, h: 1080 },
     linea: "Una oda a la gratitud y un homenaje a la vida.",
     descripcion: ["Una oda a la gratitud y un homenaje a la vida para disfrutar cada minuto de ella."],
     reconocimientos: [
