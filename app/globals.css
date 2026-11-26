@@ -285,6 +285,9 @@ em, i { font-style: italic; }
 
 /* AGENDA */
 .agenda { padding: 50px 0 70px; }
+.agenda .eventos { list-style: none; margin-top: 12px; }
+.ev.next h3::before { content: "Próxima"; font-family: var(--f-ui), sans-serif; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; background: var(--c-ladrillo-txt); color: #fff; padding: 3px 7px; border-radius: 2px; margin-right: 10px; vertical-align: 4px; }
+.ev a { font-family: var(--f-ui), sans-serif; font-size: 14px; letter-spacing: .04em; }
 .ev { display: grid; grid-template-columns: 76px 1fr; gap: 18px; padding: 22px 0; border-top: 1px solid #d9d1c3; }
 .ev .d { font-family: var(--f-titulo), serif; font-size: 36px; line-height: 1; }
 .ev .d small { display: block; font-family: var(--f-ui), sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--piedra); margin-top: 6px; }

@@ -6,6 +6,7 @@ interface Env {
   ASSETS: Fetcher;
   EMAILOCTOPUS_API_KEY: string;
   EMAILOCTOPUS_LIST_ID: string;
+  DEPLOY_HOOK_URL?: string; // Deploy Hook de Workers Builds (secreto)
 }
 
 const ORIGENES = new Set(["cartas", "guia"]);
@@ -75,5 +76,10 @@ export default {
     const url = new URL(req.url);
     if (url.pathname === "/api/suscribir" || url.pathname === "/api/suscribir/") return suscribir(req, env);
     return env.ASSETS.fetch(req);
+  },
+
+  // Reconstrucción diaria: mueve solos los eventos de «Próximas» a «Anteriores» y recoge cambios de Sanity.
+  async scheduled(_evento: ScheduledController, env: Env, ctx: ExecutionContext) {
+    if (env.DEPLOY_HOOK_URL) ctx.waitUntil(fetch(env.DEPLOY_HOOK_URL, { method: "POST" }));
   },
 } satisfies ExportedHandler<Env>;

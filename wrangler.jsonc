@@ -17,5 +17,7 @@
     // Solo /api/* pasa por el código del Worker; el resto lo sirve Cloudflare directo
     "run_worker_first": ["/api/*"]
   },
+  // Todos los días a las 5:00 a. m. de Colombia (10:00 UTC)
+  "triggers": { "crons": ["0 10 * * *"] },
   "observability": { "enabled": true }
 }
