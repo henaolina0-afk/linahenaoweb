@@ -28,9 +28,10 @@ export default function Inicio() {
           </div>
           <div className="foto">
             <Image
-              src="/img/autora-color.webp"
+              src="/img/hero-lina.webp"
               alt="Lina Henao, sentada al aire libre frente a un jardín, con camisa blanca"
-              fill
+              width={1600}
+              height={1216}
               priority
               sizes="(min-width: 900px) 600px, 100vw"
             />

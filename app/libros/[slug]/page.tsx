@@ -91,7 +91,7 @@ export default async function FichaLibro({ params }: PageProps<"/libros/[slug]">
             <p className="label">El libro en el camino</p>
             <div className="galeria">
               {l.galeria.map((g) => (
-                <Image key={g.src} src={g.src} alt={g.alt} width={600} height={750} sizes="(min-width: 900px) 270px, 50vw" />
+                <Image key={g.src} src={g.src} alt={g.alt} width={g.w} height={g.h} sizes="(min-width: 900px) 360px, 50vw" />
               ))}
             </div>
           </div>

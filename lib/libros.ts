@@ -16,7 +16,7 @@ export type Libro = {
   reconocimientos?: string[];
   citas?: { texto: string; autor: string }[];
   compra: Compra[];
-  galeria?: { src: string; alt: string }[]; // «El libro en el camino»
+  galeria?: { src: string; alt: string; w: number; h: number }[]; // «El libro en el camino»
   pendiente?: string; // nota visible mientras falte algo
 };
 
@@ -75,9 +75,8 @@ export const LIBROS: Libro[] = [
       { tienda: "firmado", texto: "Ejemplar firmado (Colombia)", url: FIRMADO },
     ],
     galeria: [
-      { src: "/img/foto-40.webp", alt: "Lina Henao en la FilBo con Esencia, voz y expresión" },
-      { src: "/img/foto-50.webp", alt: "Lina Henao con el libro y su sello de Mención de Honor" },
-      { src: "/img/foto-45.webp", alt: "Lina Henao en el escenario de la FilBo" },
+      { src: "/img/foto-40.webp", alt: "Lina Henao en la FilBo con Esencia, voz y expresión", w: 750, h: 750 },
+      { src: "/img/foto-45.webp", alt: "Lina Henao en el escenario de la FilBo", w: 960, h: 1280 },
     ],
   },
   {
@@ -95,7 +94,7 @@ export const LIBROS: Libro[] = [
       "Seleccionado en la convocatoria de autores autopublicados de la FilBo y de la Fiesta del Libro y la Cultura de Medellín",
     ],
     compra: [{ tienda: "amazon", texto: "Amazon", url: "https://www.amazon.com/dp/B0DNTZDBVC" }],
-    galeria: [{ src: "/img/foto-21.webp", alt: "Ejemplares de Ayer, hoy & mañana junto a un micrófono" }],
+    galeria: [{ src: "/img/foto-21.webp", alt: "Ejemplares de Ayer, hoy & mañana junto a un micrófono", w: 720, h: 1280 }],
   },
   {
     slug: "metaforas-de-vida",

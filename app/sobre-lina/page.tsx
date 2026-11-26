@@ -34,7 +34,7 @@ export default function SobreLina() {
       <section className="about">
         <div className="wrap">
           <div className="retrato">
-            <Image src="/img/foto-48.webp" alt="Retrato de Lina Henao sentada en un jardín" width={1400} height={1750} priority sizes="(min-width: 900px) 440px, 100vw" />
+            <Image src="/img/foto-48.webp" alt="Retrato de Lina Henao sentada en un jardín" width={1100} height={1069} priority sizes="(min-width: 900px) 440px, 100vw" />
           </div>
           <div>
             <p className="label">Sobre Lina</p>
@@ -113,11 +113,11 @@ export default function SobreLina() {
       <section>
         <div className="wrap">
           <div className="fotos">
-            <Image src="/img/foto-28.webp" alt="Lina Henao con un micrófono frente a una biblioteca" width={1400} height={1400} sizes="(min-width: 900px) 540px, 50vw" />
-            <Image src="/img/foto-19.webp" alt="Lina Henao leyendo en una feria del libro" width={1400} height={1400} sizes="(min-width: 900px) 270px, 50vw" />
-            <Image src="/img/foto-29.webp" alt="Lina Henao en una conversación en una librería" width={1400} height={1400} sizes="(min-width: 900px) 270px, 50vw" />
-            <Image src="/img/foto-23.webp" alt="Retrato de Lina Henao sonriendo" width={1400} height={1400} sizes="(min-width: 900px) 270px, 50vw" />
-            <Image src="/img/foto-09.webp" alt="Lina Henao escribiendo en una tableta al aire libre" width={1400} height={1400} sizes="(min-width: 900px) 270px, 50vw" />
+            <Image src="/img/foto-28.webp" alt="Lina Henao con un micrófono frente a una biblioteca" width={960} height={1280} sizes="(min-width: 900px) 360px, 50vw" />
+            <Image src="/img/foto-19.webp" alt="Lina Henao leyendo en una feria del libro" width={720} height={1280} sizes="(min-width: 900px) 360px, 50vw" />
+            <Image src="/img/foto-29.webp" alt="Lina Henao en una conversación en una librería" width={960} height={1280} sizes="(min-width: 900px) 360px, 50vw" />
+            <Image src="/img/foto-23.webp" alt="Retrato de Lina Henao sonriendo" width={373} height={414} sizes="(min-width: 900px) 360px, 50vw" />
+            <Image src="/img/foto-09.webp" alt="Lina Henao escribiendo en una tableta al aire libre" width={720} height={1280} sizes="(min-width: 900px) 360px, 50vw" />
           </div>
         </div>
       </section>
