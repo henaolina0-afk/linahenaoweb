@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Mismo nombre que el Worker ya creado en la cuenta de Lina (conectado a GitHub)
+  "name": "linahenaoweb",
+  "account_id": "ba3aafa131f3cfcd99a8f7a3ca2b3d96",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-11-25",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./out",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "force-trailing-slash",
+    // Solo /api/* pasa por el código del Worker; el resto lo sirve Cloudflare directo
+    "run_worker_first": ["/api/*"]
+  },
+  "observability": { "enabled": true }
+}
