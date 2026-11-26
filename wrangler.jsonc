@@ -5,6 +5,8 @@
   "account_id": "ba3aafa131f3cfcd99a8f7a3ca2b3d96",
   "main": "worker/index.ts",
   "compatibility_date": "2026-11-25",
+  // wrangler deploy construye el sitio antes de publicar (genera ./out)
+  "build": { "command": "npm run build" },
   "workers_dev": true,
   "preview_urls": true,
   "assets": {
