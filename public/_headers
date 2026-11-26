@@ -1,0 +1,3 @@
+# Descargas (guía PDF): solo llegan por correo; que los buscadores no las indexen
+/descargas/*
+  X-Robots-Tag: noindex, nofollow
